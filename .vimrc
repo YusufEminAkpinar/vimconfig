@@ -1,4 +1,7 @@
 source ~/.vim/lspconf.vim
+" Load for latex files
+autocmd FileType tex source ~/.vim/tex-settings.vim
+
 
 set number relativenumber
 set mouse=a
@@ -30,6 +33,7 @@ set showcmd
 set autoread
 set autowrite
 set hlsearch
+set incsearch
 
 command! MakeTags !ctags -R .
 " Now:
@@ -79,7 +83,7 @@ nnoremap <leader>l :ls<CR>
 nnoremap <leader>b :buffer 
 nnoremap <Tab> :tabnext<CR>
 nnoremap <S-Tab> :tabprevious<CR>
-nnoremap <Esc> :noh<CR>
+"nnoremap <Esc> :noh<CR>
 nnoremap <C-s> :w<CR>
 
 
@@ -98,3 +102,7 @@ set nohidden
 
 " For Commentary Plugin:
 filetype plugin indent on
+
+autocmd! InsertEnter * call feedkeys("\<Cmd>noh\<cr>" , 'n')
+
+

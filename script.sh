@@ -3,6 +3,7 @@
 PWD=$(pwd)
 set -xe
 
+mkdir -p ~/.vim/undo
 mkdir -p ~/.vim
 cp ./.vimrc ~/.vimrc
 cp ./lspconf.vim ~/.vim/lspconf.vim
