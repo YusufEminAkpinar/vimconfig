@@ -54,6 +54,7 @@ let g:netrw_banner = 0 		" Disable the weird banner
 let g:netrw_liststyle = 3 	" Tree view
 
 
+let g:VM_leader = "\\\\"
 let mapleader = " "
 " Insert Mode Mappings:
 inoremap ( ()<Left>

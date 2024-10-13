@@ -10,16 +10,17 @@ let maplocalleader = "\\"
 " let g:tex_flavor='latex'
 " Turns commands into actual symbols when cursor not on line, remove if
 " experience problems with fonts or performance.
-set conceallevel=1
-let g:tex_conceal='abdmg'
+" BRO IT LOOKS LIKE SHIT....
+set conceallevel=0
+" let g:tex_conceal='abdmg'
 
 
 
 
 " Insert Mode Mappings:
 inoremap <C-f> \frac{}<Left>
-inoremap <C-i> $$<Left>
-inoremap <C-d> \[<CR>\]<CR><Up>
+" inoremap <C-i> $$<Left>
+inoremap <C-d> \[<CR>\]<CR><Up><Esc><O>
 inoremap <expr> $ getline(".")[col(".")-1] == '$' ? '<Right>' : '$'
 
 " Normal Mode Mappings:

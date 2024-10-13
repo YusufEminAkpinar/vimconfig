@@ -7,6 +7,8 @@ Plug 'lervag/vimtex'
 
 call plug#end()
 
+
+" Vim-lsp settings
 function! s:on_lsp_buffer_enabled() abort
 	setlocal omnifunc=lsp#complete
 endfunction
@@ -17,4 +19,5 @@ augroup lsp_install
 augroup END
 
 let g:lsp_diagnostics_enabled = 0
+" Vim-lsp end
 
