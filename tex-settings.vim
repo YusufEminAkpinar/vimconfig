@@ -1,5 +1,6 @@
-
 let g:vimtex_view_method = 'zathura'
+let g:vimtex_quickfix_mode = 2
+let g:vimtex_quickfix_open_on_warning = 0
 
 " VimTeX uses latexmk for default, I won't change it.
 " let g:vimtex_compiler_method = 'latexrun'
@@ -15,13 +16,15 @@ set conceallevel=0
 " let g:tex_conceal='abdmg'
 
 
-
-
 " Insert Mode Mappings:
 inoremap <C-f> \frac{}<Left>
-" inoremap <C-i> $$<Left>
-inoremap <C-d> \[<CR>\]<CR><Up><Esc><O>
-inoremap <expr> $ getline(".")[col(".")-1] == '$' ? '<Right>' : '$'
+inoremap <C-b> <ESC><S-v>"by"bpea<C-w>end<ESC>O
+inoremap <C-d> \[<CR>\]<Up><CR>
+inoremap _ _{}<Left>
+inoremap ^ ^{}<Left>
+inoremap <expr> $ getline(".")[col(".")-1] == '$' ? '<Right>' : '$$<Left>'
+iunmap '
+iunmap "
 
 " Normal Mode Mappings:
-			
+" nnoremap <C-b> :y<CR>pea<C-w>end<ESC>O

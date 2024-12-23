@@ -1,6 +1,4 @@
 source ~/.vim/lspconf.vim
-" Load for latex files
-autocmd FileType tex source ~/.vim/tex-settings.vim
 
 
 set number relativenumber
@@ -105,5 +103,7 @@ set nohidden
 filetype plugin indent on
 
 autocmd! InsertEnter * call feedkeys("\<Cmd>noh\<cr>" , 'n')
+" Load for latex files
+autocmd FileType tex source ~/.vim/tex-settings.vim
 
 
